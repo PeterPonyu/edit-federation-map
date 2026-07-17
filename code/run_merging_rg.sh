@@ -1,9 +1,9 @@
 #!/bin/bash
 # run_merging_rg.sh — Merging-law RG operating-curve driver (RE-SCOPED gate, science ruling
 # 2026-07-12). Template = run_merging_kg0.sh (same skeleton) (verbatim skeleton: preflight,
-# GPU-idle gate util<25&&mem<1500 x3, CPU self-test smoke gate, budget, DRYRUN), MERGING-RG-
-# namespaced (own pid/log/markers — never reuses kg0/revins/u6/instruct/gptj names).
-# BUILD-ONLY as authored 2026-07-12: the local GPU is busy with an HL0 completion; this driver
+# GPU-idle gate util<25&&mem<1500 x3, CPU self-test smoke gate, budget, DRYRUN); uses its own
+# pid/log/marker filenames (no collision with sibling drivers).
+# BUILD-ONLY as authored 2026-07-12: the local GPU was busy with other work; this driver
 # is verified CPU-side only (bash -n, DRYRUN, and merging_m0.py --selftest) and NOT launched.
 #
 # WHY RG (not M1): the M0 raw-rho-delta c3 metric was mis-specified (I_cos & I_mag share the

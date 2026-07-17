@@ -6,12 +6,12 @@
 # MODEL_TAG, LAYER, RG_SEEDS, RG_GROUP_SIZES), and H/PY are resolved dynamically instead of
 # hard-coded absolute paths so this driver runs BOTH locally (this repo, the local workstation)
 # and on a remote GPU box (where the python interpreter and the repo root differ). See
-# PREREG-D2-WIDTH-RG-20260714.md (in prereg/) for the prereg this implements (layer rule,
+# PREREG-WIDTH-RG-20260714.md (in prereg/) for the prereg this implements (layer rule,
 # group-size/seed choices, width-ordering hypothesis, VRAM table).
 #
 # BUILD-ONLY as authored 2026-07-14: authored under a no-GPU-runs, no-network mandate.
 # Verified CPU-side only (bash -n, merging_m0.py --selftest, DRYRUN=1 for the local
-# Qwen2.5-1.5B config) and NOT launched by the authoring pass.
+# Qwen2.5-1.5B config) and not run at authoring time.
 #
 # NAMESPACING (never collides with run_merging_rg.sh, run_merging_kg0.sh, or another
 # MODEL_TAG's own run of THIS driver):
@@ -112,7 +112,7 @@ if [ "$MODEL_BASENAME" = "Llama-3.2-1B" ]; then
   case "$LAYER" in
     8|12|14)
       echo "ABORT: refuse-guard fired — MODEL_DIR resolves to Llama-3.2-1B at LAYER=${LAYER}, which re-enters the EXISTING canonical depth-tier bundle (results/merging/Llama-3.2-1B_L${LAYER}_RG/). This driver's prereg model set never needs this combination — cite the existing artifact instead of rerunning it. If this was intentional, use run_merging_rg.sh (RG_LAYER=${LAYER}) directly, not run_merging_width.sh." >&2
-      log "ABORT: refuse-guard fired — MODEL_DIR resolves to Llama-3.2-1B at LAYER=${LAYER} (see PREREG-D2-WIDTH-RG-20260714.md)"
+      log "ABORT: refuse-guard fired — MODEL_DIR resolves to Llama-3.2-1B at LAYER=${LAYER} (see PREREG-WIDTH-RG-20260714.md)"
       exit 5
       ;;
   esac

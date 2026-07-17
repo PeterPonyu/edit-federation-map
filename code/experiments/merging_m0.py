@@ -110,7 +110,7 @@ sys.path.insert(0, HARNESS)
 
 SCHEMA_VERSION = "m0.v1"
 
-# kill-gate thresholds (spec 2.4 defaults; all overridable on the CLI)
+# kill-gate thresholds (defaults; all overridable on the CLI)
 DEF_NEG_LOGIT = 0.1     # median |drop| below this (logit) => interference negligible
 DEF_NEG_ARGMAX = 0.05   # argmax-loss rate below this => interference negligible
 DEF_RHO_MIN = 0.3       # rho(I_cos, drop) below this => regime is NOT c2-coherent (cannot carry c3)
@@ -1420,7 +1420,7 @@ def selftest(selftest_dir):
 
 # ============================================================ CLI
 def main():
-    ap = argparse.ArgumentParser(description="Merging law M0 kill-gate (spec 2.4).")
+    ap = argparse.ArgumentParser(description="Merging law M0 kill-gate.")
     ap.add_argument("--selftest", action="store_true",
                     help="CPU self-test: exact-identity assertion + full phase-2 pipeline on "
                          "synthetic fixtures (no model, no GPU). Writes only under --selftest_dir.")

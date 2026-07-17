@@ -1,10 +1,10 @@
 #!/bin/bash
-# run_merging_kg0.sh — Merging law M0 kill-gate driver (direction 2.4). Template = an internal run driver (same skeleton)
+# run_merging_kg0.sh — Merging law M0 kill-gate driver. Template = an internal run driver (same skeleton).
 # (verbatim skeleton: preflight, GPU-idle gate util<25&&mem<1500 x3, run_row/validate,
-# BUDGET_MIN, DRYRUN), MERGING-namespaced (own pid/log/markers — never reuses revins/u6/
-# instruct/gptj/8bcausal names). BUILD-ONLY as authored 2026-07-11: the local GPU is busy
-# with other lanes at authoring time, so this driver is verified CPU-side only (bash -n,
-# DRYRUN, and merging_m0.py --selftest) and NOT launched by the authoring agent.
+# BUDGET_MIN, DRYRUN); uses its own pid/log/marker filenames (no collision with sibling
+# drivers). BUILD-ONLY as authored 2026-07-11: the local GPU was busy with other work, so this
+# driver is verified CPU-side only (bash -n, DRYRUN, and merging_m0.py --selftest) and not run
+# at authoring time.
 #
 # ONE GPU science row (~75 GPU-min, 1 seed), gated behind a CPU self-test smoke:
 #
@@ -22,7 +22,7 @@
 #     STANDALONE on CPU later:  merging_m0.py --phase2_dir results/merging/Llama-3.2-1B_L12_s0
 #
 # ROME value-opt stays fp32 (editor's own rule; this driver never passes --model_dtype bf16).
-# GPU-HOUR ESTIMATE: 200 edits x ~20 value-opt steps dominate (~75 GPU-min per spec 2.4 M0);
+# GPU-HOUR ESTIMATE: 200 edits x ~20 value-opt steps dominate (~75 GPU-min for the M0 kill-gate);
 # the 3 regimes add ~330 single forwards (cheap). Total ~= 75 GPU-min = ~1.3 GPU-hours.
 set -u
 H="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

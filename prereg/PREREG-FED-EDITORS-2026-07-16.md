@@ -54,7 +54,7 @@ This addendum does NOT modify `merging_m0.py` or re-open the ROME verdict.
   scoped-federation boundary are reported descriptively for MEMIT; only the ROME-anchor
   (a) and the direction (b) are hard predictions.
 
-## Launch (when a GPU wave is authorised — NOT launched by the author)
+## Launch (when a GPU wave is authorised — reference only, not executed at authoring time)
 
 ```
 MODEL_DIR=data/models/Llama-3.2-1B  MODEL_TAG=llama1b  EDITOR=memit LAYER=12 ./run_merging_editors.sh

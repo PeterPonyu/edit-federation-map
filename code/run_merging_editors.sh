@@ -6,7 +6,7 @@
 # a chosen EDITOR ∈ {rome,memit,alpha}. See PREREG-FED-EDITORS-2026-07-16.md (in prereg/).
 #
 # BUILD-ONLY as authored 2026-07-16: authored under a no-GPU-runs, no-network mandate. Verified
-# CPU-side only (bash -n, merging_editors.py --selftest, DRYRUN=1) and NOT launched by the author.
+# CPU-side only (bash -n, merging_editors.py --selftest, DRYRUN=1) and not run at authoring time.
 #
 # NAMESPACING (never collides with run_merging_width.sh / run_merging_rg.sh, or another
 # MODEL_TAG×EDITOR run of THIS driver):

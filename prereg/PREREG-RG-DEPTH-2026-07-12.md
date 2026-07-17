@@ -16,10 +16,12 @@ PASS iff partial ρ(I_cos, drop | I_mag) ≥ 0.15 in ≥2 non-negligible, c2-coh
 own-magnitude-partialling survival required at qualifying cells.
 
 ## Pre-registered expectations (both outcomes informative; NO kill-power over L12)
-- **L8** (geometry-dominant regime documented in the companion mechanism study (under review), within-probe 0.395): expect the law to
-  HOLD at small g — a replication strengthening the depth-generality claim.
-- **L14** (norm-growth-dominant regime: key-cos 0.301 < NG 0.502): geometry partial may
-  ATTENUATE — if so, this mirrors the companion mechanism study's documented regime transition and SCOPES the
+- **L8** (the geometry-dominant regime documented in the companion mechanism study (under
+  review)): expect the law to HOLD at small g — a replication strengthening the
+  depth-generality claim.
+- **L14** (the norm-growth-dominant regime documented in the companion study): geometry
+  partial may ATTENUATE — if so, this mirrors the companion mechanism study's documented
+  regime transition and SCOPES the
   merging law to geometry-dominant depths (a finding, not a failure).
 - Failure at BOTH layers → the L12 result stands but the paper claims L12-only
   (single-depth caveat prominent).

@@ -1,7 +1,7 @@
 # Pre-registration: edit-federation study — merging RG boundary vs WIDTH, family held fixed — 2026-07-14
 
-> Written BEFORE launch (BUILD-ONLY authoring pass; no GPU runs, no network, no launches by
-> this pass). Companion to `PREREG-RG-DEPTH-2026-07-12.md` (which varied LAYER within one
+> Written BEFORE launch (build-only pass; no GPU runs, no network, no launches at authoring
+> time). Companion to `PREREG-RG-DEPTH-2026-07-12.md` (which varied LAYER within one
 > model). This tier varies MODEL WIDTH while holding architecture family fixed, to
 > deconfound the two pieces of existing evidence:
 >   - Llama-3.2-1B (16L) @ L12 (75% depth): RG PASS, qualifying g ∈ {2,3,5} only
@@ -158,7 +158,7 @@ model FLOPs (~params, since sequence length/steps are fixed): Qwen2.5-1.5B ~1.2x
 comparability subset); Qwen2.5-14B ~12x (~65-95 min). All comfortably inside a single
 the shared GPU box restart window alongside other planned tiers (see the internal compute plan, §C, a modest budget class).
 
-## Launch commands (reference only — NOT executed by this authoring pass)
+## Launch commands (reference only — not executed at authoring time)
 ```bash
 # local, Qwen2.5-1.5B — cheap, full group-size sweep
 cd edit-harness
@@ -205,7 +205,7 @@ restart of this wave from ever clobbering the canonical L12 table. Note: a clean
 `RG_operating_curve_table_mistral7b_L${layer}.json`, minimal diff, `bash -n` clean). Both
 known unguarded `--rg` call sites are now namespaced.
 
-## Analysis (CPU-only, after all cells land — not part of this authoring pass)
+## Analysis (CPU-only, after all cells land — not part of this build-only pass)
 Standalone re-analysis of any bundle is always available with no model/GPU:
 `merging_m0.py --rg_phase2_dir results/merging/<basename>_L<layer>_RG`. A future CPU pass
 tabulates `boundary(model)` per cell into one table and evaluates H-Qwen/H-Llama directly —

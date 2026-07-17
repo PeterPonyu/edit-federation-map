@@ -13,7 +13,7 @@
 | Date (2026) | Document | What it froze |
 |---|---|---|
 | 07-12 | RG kill-gate window record + `PREREG-RG-DEPTH-2026-07-12.md` | The full gate: partial ρ(I_cos,drop \| I_mag) ≥ +0.15 in ≥2 group sizes × ≥2 seeds; coherence ρ ≥ 0.30; negligibility median\|drop\| ≥ 0.1 or argmax-loss ≥ 0.05; saturation ceiling 0.8; own-magnitude partial guard. Depth tier (L8/L14) designs. |
-| 07-14 | `PREREG-D2-WIDTH-RG-20260714.md` | Width tier (family fixed, width varied) design and directional expectations. |
+| 07-14 | `PREREG-WIDTH-RG-20260714.md` | Width tier (family fixed, width varied) design and directional expectations. |
 | 07-15 ~12:55 | `PREDICTIONS-GAIN-WAVE-2026-07-15.md` | Gain definition (median \|drop\|/dose, positive-dose pooled g≤20); the ordering claim Spearman(gain, constructive fraction) ≤ −0.7; per-cell directional predictions (below); falsifier. |
 | 07-15 ~13:50 | same doc, Addendum 1 (before launch) | Three 50%-depth contrast cells with directional predictions. |
 | 07-15 ~14:30 | same doc, Addendum 2 (before launch) | GPT-2-XL pair, declared EXPLORATORY (ordering claim only). |
