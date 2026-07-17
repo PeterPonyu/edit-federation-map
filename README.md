@@ -125,4 +125,4 @@ not included or relicensed here.
 
 ## Full archive (Zenodo)
 
-The complete archive, including the per-cell edit-vector and measurement `.npz` payloads (~2.6 GB), is deposited at Zenodo (concept DOI inserted here at publication). This repository carries the code, pre-registration documents, figure pipeline, and all aggregate result JSONs; every table and figure in the paper reproduces from these.
+The complete archive, including the per-cell edit-vector and measurement `.npz` payloads (~2.6 GB), is deposited at Zenodo: https://doi.org/10.5281/zenodo.21405273. This repository carries the code, pre-registration documents, figure pipeline, and all aggregate result JSONs; every table and figure in the paper reproduces from these.
