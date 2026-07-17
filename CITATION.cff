@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it as below."
+title: "Code and data for: When Do Rank-One Knowledge Edits Merge? A Gain-Screened Two-Regime Law of Edit Federation"
+type: dataset
+authors:
+  - given-names: Zeyu
+    family-names: Fu
+    email: fuzeyu09@gmail.com
+    orcid: "https://orcid.org/0009-0001-8329-0108"
+    affiliation: "State Key Laboratory of Trauma and Chemical Poisoning, Institute of Combined Injury, Chongqing Engineering Research Center for Nanomedicine, College of Preventive Medicine, Army Medical University, Chongqing, China"
+license: MIT
+notes: "DOI assigned at deposit. Result artifacts (results/) and pre-registration documents (prereg/) are released under CC BY 4.0; source code is MIT. Model checkpoints and the CounterFact/zsRE datasets are third-party resources and are not included."
