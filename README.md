@@ -1,4 +1,8 @@
-# Code and data for: *When Do Rank-One Knowledge Edits Merge? A Gain-Screened Two-Regime Law of Edit Federation*
+# Edit federation map
+
+Public measurements of key geometry and collateral interference when rank-one locate-then-edit updates are merged by task arithmetic.
+
+**[Map](https://peterponyu.github.io/edit-federation-map/)** · **[Source](https://github.com/PeterPonyu/edit-federation-map)**# Code and data for: *When Do Rank-One Knowledge Edits Merge? A Gain-Screened Two-Regime Law of Edit Federation*
 
 This archive contains the experiment code, edit vectors, and result artifacts that
 support every number, table, and figure in the manuscript. It is the research-data
