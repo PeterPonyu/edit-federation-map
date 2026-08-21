@@ -1,0 +1,8 @@
+.omc/
+.cursor/
+.claude/
+.cloud/
+.codex/
+.env
+.env.*
+secrets.env
