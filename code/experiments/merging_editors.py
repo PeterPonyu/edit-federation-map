@@ -62,8 +62,8 @@ GENERALISED STRENGTH and the screening statistics (reduce to merging_m0's for RO
 For ROME (one layer, kk=k, denom=k·k) S_b = ||r_b||/||k_b|| and I_cos/I_mag collapse to
 merging_m0's definitions exactly — this is why the two are directly comparable.
 
-DOSE (the merging-law "received dose", corresponding-layer pairing choice documented
-here so the reviewer can see it): the signed projection of the received cross-talk onto
+DOSE (the merging-law "received dose", with the corresponding-layer pairing choice
+documented here): the signed projection of the received cross-talk onto
 edit a's OWN aggregate intended-output direction
 
         R_a^agg = Σ_l r_a^l                 (sum of a's per-layer residual vectors)

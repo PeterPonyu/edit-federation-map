@@ -1,5 +1,5 @@
 # Edit-federation figures: R/ggplot2 -> tikzDevice -> standalone pdflatex -> PDF.
-# The submission main.tex includes ONLY figA.pdf / figB.pdf (portal-safe, no inline TikZ).
+# Downstream documents include ONLY the built PDFs; no inline TikZ is exported.
 all: figA.pdf figB.pdf figC.pdf figD.pdf figE.pdf
 figA_gain_vs_frac.tex figB_g_profiles.tex: make_figures.R
 	Rscript make_figures.R

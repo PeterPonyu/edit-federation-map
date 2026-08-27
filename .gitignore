@@ -1,8 +1,33 @@
-.omc/
-.cursor/
-.claude/
-.cloud/
-.codex/
+# Credentials
 .env
 .env.*
 secrets.env
+*.pem
+*.key
+
+# Agent and editor state (never publishable)
+.omc/
+.omx/
+.cursor/
+.cursor.cloud/
+.claude/
+.cloud/
+.codex/
+.grok/
+.agents/
+.superpowers/
+.playwright-mcp/
+.hud/
+agent-transcripts/
+
+# Build and cache
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+node_modules/
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.out
