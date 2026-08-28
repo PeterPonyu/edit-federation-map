@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this code or data, please cite it as below."
+message: "If you use this code or data, please cite the archived release."
 title: "Code and data for: When Do Rank-One Knowledge Edits Merge? A Gain-Screened Two-Regime Law of Edit Federation"
 type: dataset
 authors:
@@ -9,4 +9,19 @@ authors:
     orcid: "https://orcid.org/0009-0001-8329-0108"
     affiliation: "State Key Laboratory of Trauma and Chemical Poisoning, Institute of Combined Injury, Chongqing Engineering Research Center for Nanomedicine, College of Preventive Medicine, Army Medical University, Chongqing, China"
 license: MIT
-notes: "DOI assigned at deposit. Result artifacts (results/) and pre-registration documents (prereg/) are released under CC BY 4.0; source code is MIT. Model checkpoints and the CounterFact/zsRE datasets are third-party resources and are not included."
+repository-code: "https://github.com/PeterPonyu/edit-federation-map"
+url: "https://peterponyu.github.io/edit-federation-map/"
+doi: "10.5281/zenodo.21405273"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21405273"
+    description: "Zenodo concept DOI for the edit-federation measurement archive (v1.0.0, 2026-07-17)"
+keywords:
+  - knowledge editing
+  - model merging
+  - task arithmetic
+  - rank-one weight updates
+  - weight-space interference
+  - large language models
+notes: "Source code is released under MIT. Result arrays (results/) and pre-registration documents (prereg/) are released under CC BY 4.0. Model checkpoints and the CounterFact/zsRE datasets are third-party resources served from their original sources."
+date-released: 2026-07-17

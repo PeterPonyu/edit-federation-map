@@ -1,38 +1,71 @@
 # Edit federation map
 
-Public measurements of key geometry and collateral interference when rank-one locate-then-edit updates are merged by task arithmetic.
+When do rank-one knowledge edits merge? A gain-screened two-regime law of edit federation,
+with the public measurements behind it.
 
-**[Map](https://peterponyu.github.io/edit-federation-map/)** · **[Source](https://github.com/PeterPonyu/edit-federation-map)** · **[Numerical archive](https://doi.org/10.5281/zenodo.21405273)**
+**[Map](https://peterponyu.github.io/edit-federation-map/)** ·
+**[Source](https://github.com/PeterPonyu/edit-federation-map)** ·
+**[Numerical archive](https://doi.org/10.5281/zenodo.21405273)**
 
-## The object
+## The result
 
-Locate-then-edit methods write a rank-one update into an MLP. Merging several such updates by plain addition produces collateral interference: one fact moves another. A closed-form key-cosine discriminant tracks that damage until perturbation gain and merge size push the system into a second regime.
+Independently computed weight updates are commonly assumed to interfere monotonically.
+Rank-one knowledge edits do not. Aligned merge cross-talk reverses sign: high-gain layers
+damage member-target logits, while low-gain layers raise them, before a crossover whose
+location varies by architecture.
 
-Gain acts as a rank-level screen that separates the two regimes; within a regime, geometry tracks the size of the cross-term.
+Perturbation gain ranks the two regimes, so it works as a rank-level screen: it tells you
+which regime a layer is in, and inside a regime a closed-form key-cosine discriminant tracks
+the size of the cross-term. Both quantities are read from the editor's own closed form, so
+neither requires a learned probe or a held-out fit.
 
-## Frozen measurement object
+## What is measured
 
-- **22 ROME cells** across 7 families; 65,868 merge observations. Llama-2-13B is reported as an addendum alongside the n=22 freeze.
-- Ordering Spearman(gain, constructive fraction) prints **−0.82** against a frozen directional bound of **≤ −0.7**.
-- Gain cut at 8 (13 high-gain / 9 low-gain).
-- Qwen2.5-14B constructive fraction **81–88%**.
-- Geometry-valid windows are cell-specific: **g ≤ 5** at the reference cell, and larger at six further qualifying cells. Per-cell windows ship in the archive.
-- High-gain admission benefit **+0.647** is measured as a member-target quantity under fixed composition, retrospectively.
-- The prospective group-formation test supports the primary geometry comparisons in all three seeds; the utility-matched gate is **Mixed**.
+A frozen measurement object, released whole:
 
-Live figures and the 22-cell table: https://peterponyu.github.io/edit-federation-map/measurements/
+- **22 ROME cells** across 7 architecture families spanning 1B to 20B, and **65,868 merge
+  observations**.
+- Ordering **Spearman(gain, constructive fraction) = −0.82**, against a frozen directional
+  bound of ≤ −0.7; family-clustered 95% CI **[−0.88, −0.51]**.
+- Gain cut at **8**, splitting the map into **13 high-gain** and **9 low-gain** cells.
+- Constructive merges dominate the low-gain regime: Qwen2.5-14B reaches a constructive
+  fraction of **81–88%**.
+- Constructive cross-talk survives matching on solo installation and residual magnitude at
+  Mistral-Nemo-12B, and reappears at a **held-out Llama-2-13B cell** outside the n=22 freeze.
+- Per-cell geometry-valid windows ship in the archive: **g ≤ 5** at the reference cell, and
+  larger at six further qualifying cells.
+- Geometry-ordered selection at a 25% budget avoids **+0.647** member-target logits of drop
+  versus random under fixed composition.
+- A **prospective group-formation test** at Llama-3.2-1B L12 supports the primary geometry
+  comparisons in all three seeds.
+
+Live figures and the 22-cell table: <https://peterponyu.github.io/edit-federation-map/measurements/>
 
 ## Reproduce
 
-The GitHub tree and the Zenodo archive carry experiment code, edit vectors, per-cell operating curves, and the R figure pipeline. Model checkpoints and the CounterFact / zsRE fact files are third-party and are not redistributed.
+The GitHub tree and the Zenodo archive carry the experiment code, the edit vectors, the
+per-cell operating curves, and the R figure pipeline.
 
-From the archive root, make the result arrays visible to the analysis tree, then rebuild the operating map, signed reanalysis, cross-term alignment, matched-dose span, gain screen, gain holdout, and admission-benefit tables. Public plots rebuild from the R figure pipeline. All of those rebuilds are CPU-only.
+From the archive root, make the result arrays visible to the analysis tree, then rebuild the
+operating map, the signed reanalysis, cross-term alignment, matched-dose span, the gain
+screen, the gain holdout, and the admission-benefit tables. Public plots rebuild from the R
+figure pipeline. Every one of those rebuilds is CPU-only — no model weights required.
 
-Frozen protocol documents ship in the archive under CC BY 4.0.
+Model checkpoints and the CounterFact / zsRE fact files are third-party resources and are
+served from their original sources rather than redistributed here.
 
-## Archive
+## Scope of the claims
 
-Concept DOI (unchanged; v1.0.0, 2026-07-17): https://doi.org/10.5281/zenodo.21405273
+Stated once, so the measurements above can be read at face value. The two-regime law is
+established on the frozen 22-cell object; the geometry-valid group size is a per-cell window
+and the reference cell's `g ≤ 5` is not a map-wide constant. Gain is a rank-level screen
+rather than a carrier of the effect. The admission benefit is a member-target quantity under
+fixed composition; the prospective run supports the primary geometry comparisons, and its
+utility-matched gate reads Mixed.
+
+## Archive and license
+
+Concept DOI (unchanged; v1.0.0, 2026-07-17): <https://doi.org/10.5281/zenodo.21405273>
 
 - Code: MIT
 - Result arrays and frozen protocol documents: CC BY 4.0
